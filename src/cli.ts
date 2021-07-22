@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { foo } from './main'
+import { astar } from './modules/astar';
 
-foo()
+astar({ station: 6, line: 'blue' }, { station: 13, line: 'red' });
