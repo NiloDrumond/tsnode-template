@@ -6,7 +6,7 @@ export type ILines = {
 };
 
 export type INode = {
-  line?: ILine;
+  line: ILine;
   station: number;
 };
-export type ICameFrom = Record<string, INode>;
+export type ICameFrom = Record<number, INode>;

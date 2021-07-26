@@ -1,7 +1,8 @@
 import { connections, distances, lines } from './data';
 import { ICameFrom, ILine, INode } from './interfaces';
 import { MinPriorityQueue } from '@datastructures-js/priority-queue';
-// m/s
+import { parseResults } from './parse';
+
 const TRAIN_SPEED = 30;
 const SWAP_TIME = 4 * 60;
 
@@ -9,14 +10,14 @@ function heuristic(a: number, b: number) {
   return distances[a][b];
 }
 
-function getLine(a: number, b: number): ILine | undefined {
+function getLine(a: number, b: number): ILine {
   const keys = Object.keys(lines) as ILine[];
   for (let i = 0; i < keys.length; i++) {
     if (lines[keys[i]].includes(a) && lines[keys[i]].includes(b)) {
       return keys[i];
     }
   }
-  return undefined;
+  throw new Error('Line not found');
 }
 
 function astar(s: INode, e: INode): void {
@@ -32,7 +33,6 @@ function astar(s: INode, e: INode): void {
     const neighbors = connections[current.station];
     if (current.station === e.station) {
       if (current.line !== e.line) {
-        cameFrom[e.station] = { ...cameFrom[e.station], line: e.line };
         costSoFar[e.station] += SWAP_TIME;
       }
       break;
@@ -58,10 +58,9 @@ function astar(s: INode, e: INode): void {
       }
     }
   }
-  console.log('END:');
-  console.log(cameFrom);
-  console.log('-----------------------------');
-  console.log(costSoFar);
+  console.log(parseResults({ cameFrom, costSoFar, e, s }));
 }
 
 export { astar };
+
+//cameFrom[e.station] = { ...cameFrom[e.station], line: e.line };
