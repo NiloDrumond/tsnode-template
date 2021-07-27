@@ -1,3 +1,3 @@
-# TypeScript A\*
+# TypeScript Minimax
 
-A\* algorithm implemented with typescript on Node.js
+Minimax algorithm implemented with typescript on Node.js
