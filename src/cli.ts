@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { astar } from './modules/astar';
+import minimax from './modules/minimax';
 
-astar({ station: 6, line: 'blue' }, { station: 13, line: 'green' });
+minimax();
