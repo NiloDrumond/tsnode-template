@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import minimax from './modules/minimax';
+import { qlearning } from './modules/qlearning';
 
-minimax();
+const r = -0.4;
+console.log('r: ', r);
+qlearning(r);
