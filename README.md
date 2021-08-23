@@ -1,3 +1,5 @@
-# TypeScript Minimax
+# TypeScript Algorithms
 
-Minimax algorithm implemented with typescript on Node.js
+- A*
+- Minimax
+- QLearning
