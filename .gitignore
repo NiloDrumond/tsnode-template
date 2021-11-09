@@ -10,3 +10,5 @@ coverage
 *.log
 .history
 .github
+
+/temp
