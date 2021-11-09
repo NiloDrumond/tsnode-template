@@ -17,11 +17,10 @@
     "my-cli-tool": "./dist/esbuild/cli.js"
   },
   "scripts": {
-    "cli": "ts-node src/cli.ts",
+    "cli": "ts-node src/main.ts",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "clean": "rm -rf dist build package",
     "ts-node": "ts-node --transpile-only",
-    "docs": "typedoc --entryPoints src/main.ts",
     "build": "tsc -p tsconfig.json",
     "build-all": "yarn clean && yarn build && yarn esbuild-node && yarn esbuild-browser",
     "esbuild-browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=dist/esbuild/browser.js",
@@ -32,7 +31,11 @@
     "esbuild-node:watch": "esbuild src/cli.ts --bundle --watch --sourcemap=external --outfile=dist/esbuild/cli.js"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/node": "^15.0.1",
+    "@types/prompt": "^1.1.1",
+    "@types/sharp": "^0.29.3",
+    "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "esbuild": "^0.11.11",
@@ -40,12 +43,22 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.2",
-    "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.35",
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@datastructures-js/priority-queue": "^5.1.1"
+    "@datastructures-js/priority-queue": "^5.1.1",
+    "@nut-tree/nut-js": "^1.7.0",
+    "@types/screenshot-desktop": "^1.12.0",
+    "buffer-image-size": "^0.6.4",
+    "fs-extra": "^10.0.0",
+    "image-size": "^1.0.0",
+    "jimp": "^0.16.1",
+    "node-tesseract-ocr": "^2.2.1",
+    "prompt": "^1.2.0",
+    "screenshot-desktop": "^1.12.7",
+    "sharp": "^0.29.2",
+    "uuid": "^8.3.2"
   }
 }

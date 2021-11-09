@@ -18,7 +18,7 @@
     "sourceMap": true,
     "outDir": "./dist/tsc/",
     "types": ["node"],
-    "lib": ["ES6", "DOM"]
+    "lib": ["ES6", "DOM", "ES2021.String"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
