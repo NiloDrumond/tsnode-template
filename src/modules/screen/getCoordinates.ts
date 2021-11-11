@@ -1,8 +1,8 @@
-import { ocr } from '../ocr';
 import { getScreenShot } from '../screen/getScreenShot';
-import { Coordinates } from './interfaces';
+import { Coordinates } from '../core/interfaces';
 import fs from 'fs';
-import { regions } from './regions';
+import { regions } from '../core/regions';
+import { ocr } from '../infra/ocr';
 
 async function getCoordinates(): Promise<Coordinates> {
   const img = await getScreenShot(regions.coordinates, 6);

@@ -6,7 +6,7 @@ import {
   sleep,
   Region,
 } from '@nut-tree/nut-js';
-import { regions } from '../../shared/regions';
+import { regions } from '../../core/regions';
 
 // 100
 // 30

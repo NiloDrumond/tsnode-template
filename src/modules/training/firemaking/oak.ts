@@ -7,10 +7,10 @@ import {
   left,
   Point,
 } from '@nut-tree/nut-js';
-import { MENU } from '../../shared/constants';
-import { getCoordinates } from '../../shared/getCoordinates';
-import { Coordinates } from '../../shared/interfaces';
-import { regions } from '../../shared/regions';
+import { MENU } from '../../core/constants';
+import { getCoordinates } from '../../core/getCoordinates';
+import { Coordinates } from '../../core/interfaces';
+import { regions } from '../../core/regions';
 
 const logs = 26;
 const { HORIZONTAL_GAP, VERTICAL_GAP, COLUMNS } = MENU;

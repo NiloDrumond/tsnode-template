@@ -80,10 +80,12 @@ async function setCameraPosition(): Promise<void> {
   await mouse.leftClick();
   await mouse.move(left(300));
   await mouse.scrollUp(100);
-  await mouse.scrollDown(20);
+  await mouse.scrollDown(50); // 20 neutral
   await sleep(200);
   await mouse.pressButton(Button.MIDDLE);
-  await mouse.move(down(200));
+  await sleep(Math.random() * 50);
+  await mouse.move(down(400));
+  await sleep(Math.random() * 50);
   await mouse.releaseButton(Button.MIDDLE);
 }
 

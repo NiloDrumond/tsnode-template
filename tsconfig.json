@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./src/@types"],
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -20,6 +21,6 @@
     "types": ["node"],
     "lib": ["ES6", "DOM", "ES2021.String"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/@types"],
   "exclude": ["node_modules"]
 }
