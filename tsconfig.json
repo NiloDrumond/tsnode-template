@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      // "@/*": ["./src/*"],
+      "@user/*": ["./src/modules/user/*"],
+      "@lobby/*": ["./src/modules/lobby/*"]
+    },
     "typeRoots": ["./src/@types"],
     "target": "es6",
     "module": "commonjs",

@@ -1,5 +1,1 @@
-# TypeScript Algorithms
-
-- A*
-- Minimax
-- QLearning
+# EssayWars
