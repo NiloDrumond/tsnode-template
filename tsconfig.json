@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      // "@/*": ["./src/*"],
-      "@user/*": ["./src/modules/user/*"],
-      "@lobby/*": ["./src/modules/lobby/*"]
+      "@/*": ["./src/*"]
     },
     "typeRoots": ["./src/@types"],
     "target": "es6",
